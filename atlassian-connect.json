@@ -1,0 +1,55 @@
+{
+    "key": "my-app",
+    "name": "My app",
+    "description": "My very first app",
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "apiMigrations": {
+        "context-qsh": true,
+        "signed-install": true
+    },
+    "modules": {
+        "serviceDeskPortalRequestCreatePropertyPanels": [
+            {
+                "key": "cdb-panel",
+                "url": "/hello-world?requestTypeId={servicedesk.requestTypeId}&requestId={servicedesk.requestId}&serviceDeskId={servicedesk.serviceDeskId}&user=123"
+            }
+        ],
+        "generalPages": [
+            {
+                "key": "hello-world-page-jira",
+                "location": "system.top.navigation.bar",
+                "name": {
+                    "value": "Hello World"
+                },
+                "url": "/hello-world?user=123",
+                "conditions": [
+                    {
+                        "condition": "user_is_logged_in"
+                    }
+                ]
+            },
+            {
+                "key": "hello-world-page-confluence",
+                "location": "system.header/left",
+                "name": {
+                    "value": "Hello World"
+                },
+                "url": "/hello-world",
+                "conditions": [
+                    {
+                        "condition": "user_is_logged_in"
+                    }
+                ]
+            }
+        ]
+    }
+}
