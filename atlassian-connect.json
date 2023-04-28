@@ -20,7 +20,8 @@
         "serviceDeskPortalRequestCreatePropertyPanels": [
             {
                 "key": "cdb-panel",
-                "url": "/hello-world?requestTypeId={servicedesk.requestTypeId}&requestId={servicedesk.requestId}&serviceDeskId={servicedesk.serviceDeskId}&user=123"
+                "url": "/hello-world?requestTypeId={servicedesk.requestTypeId}&requestId={servicedesk.requestId}&serviceDeskId={servicedesk.serviceDeskId}&user=123",
+                "weight": 99
             }
         ],
         "generalPages": [
